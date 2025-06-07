@@ -67,15 +67,15 @@ export default function Header() {
                   )}
                 </Link>
               ))}
-              <div className="ml-4">
+              {/* <div className="ml-4">
                 <ThemeToggle />
-              </div>
+              </div> */}
             </nav>
 
             {/* Mobile Theme Toggle */}
-            <div className="md:hidden">
+            {/* <div className="md:hidden">
               <ThemeToggle />
-            </div>
+            </div> */}
           </div>
         </div>
       </header>

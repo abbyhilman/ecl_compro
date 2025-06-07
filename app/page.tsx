@@ -30,25 +30,25 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-muted/80 to-background z-0">
           <div className="absolute inset-0 bg-[url('/images/logo_banner.png')] bg-cover bg-center opacity-10"></div>
         </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="container mx-auto px-6 sm:px-8 md:px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
               className="text-center lg:text-left"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 <span className="text-primary">Solusi Engineering</span> Terpercaya
               </h1>
-              <p className="mt-6 text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0">
+              <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0">
                 PT Emsada Cipta Lestari, berdiri sejak 2013, menyediakan layanan engineering terbaik untuk pertambangan dan alat berat.
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" asChild>
                   <Link href="/products">
                     Jelajahi Layanan Kami
@@ -82,8 +82,8 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-24 bg-muted/30">
+        <div className="container mx-auto px-6 sm:px-8 md:px-4">
           <motion.div 
             initial="hidden"
             whileInView="visible"
@@ -91,8 +91,8 @@ export default function Home() {
             variants={fadeInUp}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold">Layanan & Solusi Kami</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Layanan & Solusi Kami</h2>
+            <p className="mt-4 text-base sm:text-lg text-muted-foreground">
               Solusi engineering komprehensif untuk mendukung kebutuhan pertambangan dan industri alat berat Anda
             </p>
           </motion.div>
@@ -102,36 +102,36 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-12 max-w-6xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 sm:mt-12 max-w-7xl mx-auto"
           >
             {[
               {
-                icon: <Factory className="h-10 w-10" />,
+                icon: <Factory className="h-8 sm:h-10 w-8 sm:w-10" />,
                 title: "Operator Bersertifikasi",
                 description: "Operator berlisensi SIO dan Kimper dari PT Trakindo Utama, menangani unloading, inspeksi, dan reposisi unit dengan standar tinggi."
               },
               {
-                icon: <Settings className="h-10 w-10" />,
+                icon: <Settings className="h-8 sm:h-10 w-8 sm:w-10" />,
                 title: "Helper Profesional",
                 description: "Helper terlatih untuk inspeksi, perakitan, preservasi, dan pemeliharaan unit sesuai SOP, mendukung operasional di yard."
               },
               {
-                icon: <PenTool className="h-10 w-10" />,
+                icon: <PenTool className="h-8 sm:h-10 w-8 sm:w-10" />,
                 title: "Sektor Fabrikasi",
                 description: "Fabrikasi inovatif untuk pertambangan dan alat berat, mengutamakan kualitas dan keselamatan kerja."
               },
               {
-                icon: <BarChart3 className="h-10 w-10" />,
+                icon: <BarChart3 className="h-8 sm:h-10 w-8 sm:w-10" />,
                 title: "Body Repair",
                 description: "Perbaikan bodi unit seperti 745, 777, dan D10T dengan standar internasional (Australia, Dubai, Mexico)."
               },
               {
-                icon: <Shield className="h-10 w-10" />,
+                icon: <Shield className="h-8 sm:h-10 w-8 sm:w-10" />,
                 title: "Administrasi & Pelaporan",
                 description: "Pengelolaan data dan laporan harian, mingguan, hingga tahunan untuk transparansi dan efisiensi operasional."
               },
               {
-                icon: <Truck className="h-10 w-10" />,
+                icon: <Truck className="h-8 sm:h-10 w-8 sm:w-10" />,
                 title: "Logistik & Pengiriman",
                 description: "Pengiriman barang dan suku cadang yang tepat waktu, mendukung kebutuhan pelanggan seperti PT Sanggar Sarana Baja."
               }
@@ -142,12 +142,12 @@ export default function Home() {
                     <div className="rounded-full bg-primary/10 p-3 w-fit mb-4 text-primary">
                       {service.icon}
                     </div>
-                    <h3 className="text-xl font-semibold">{service.title}</h3>
-                    <p className="mt-2 text-muted-foreground">{service.description}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold">{service.title}</h3>
+                    <p className="mt-2 text-sm sm:text-base text-muted-foreground">{service.description}</p>
                     <div className="mt-4">
                       <Link 
                         href={`/products#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="inline-flex items-center text-primary font-medium"
+                        className="inline-flex items-center text-primary font-medium text-sm sm:text-base"
                       >
                         Pelajari lebih lanjut 
                         <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -162,8 +162,8 @@ export default function Home() {
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-24">
+        <div className="container mx-auto px-6 sm:px-8 md:px-4">
           <motion.div 
             initial="hidden"
             whileInView="visible"
@@ -171,15 +171,15 @@ export default function Home() {
             variants={fadeInUp}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold">Produk & Proyek Unggulan</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Produk & Proyek Unggulan</h2>
+            <p className="mt-4 text-base sm:text-lg text-muted-foreground">
               Temukan solusi engineering kami yang telah dipercaya oleh klien ternama seperti PT Trakindo Utama dan PT Sanggar Sarana Baja
             </p>
           </motion.div>
 
-          <Tabs defaultValue="body-repair" className="mt-12 max-w-6xl mx-auto">
+          <Tabs defaultValue="body-repair" className="mt-8 sm:mt-12 max-w-7xl mx-auto">
             <div className="flex justify-center">
-              <TabsList className="mb-8">
+              <TabsList className="mb-8 flex flex-wrap justify-center">
                 <TabsTrigger value="body-repair">Body Repair</TabsTrigger>
                 <TabsTrigger value="fabrikasi-instalasi">Fabrikasi & Instalasi</TabsTrigger>
                 <TabsTrigger value="logistik-pemeliharaan">Logistik & Pemeliharaan</TabsTrigger>
@@ -187,7 +187,7 @@ export default function Home() {
             </div>
 
             <TabsContent value="body-repair" className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   {
                     title: "Body Repair Unit 745 & 777",
@@ -215,9 +215,9 @@ export default function Home() {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold">{product.title}</h3>
-                      <p className="mt-2 text-muted-foreground">{product.description}</p>
-                      <Button variant="link" className="p-0 mt-2" asChild>
+                      <h3 className="text-lg sm:text-xl font-semibold">{product.title}</h3>
+                      <p className="mt-2 text-sm sm:text-base text-muted-foreground">{product.description}</p>
+                      <Button variant="link" className="p-0 mt-2 text-sm sm:text-base" asChild>
                         <Link href="/products">Lihat Detail</Link>
                       </Button>
                     </CardContent>
@@ -235,7 +235,7 @@ export default function Home() {
             </TabsContent>
 
             <TabsContent value="fabrikasi-instalasi" className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   {
                     title: "Instalasi Dump Unit WT50KL",
@@ -263,9 +263,9 @@ export default function Home() {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold">{product.title}</h3>
-                      <p className="mt-2 text-muted-foreground">{product.description}</p>
-                      <Button variant="link" className="p-0 mt-2" asChild>
+                      <h3 className="text-lg sm:text-xl font-semibold">{product.title}</h3>
+                      <p className="mt-2 text-sm sm:text-base text-muted-foreground">{product.description}</p>
+                      <Button variant="link" className="p-0 mt-2 text-sm sm:text-base" asChild>
                         <Link href="/products">Lihat Detail</Link>
                       </Button>
                     </CardContent>
@@ -283,7 +283,7 @@ export default function Home() {
             </TabsContent>
 
             <TabsContent value="logistik-pemeliharaan" className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   {
                     title: "Fuel Dispensing",
@@ -311,9 +311,9 @@ export default function Home() {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold">{product.title}</h3>
-                      <p className="mt-2 text-muted-foreground">{product.description}</p>
-                      <Button variant="link" className="p-0 mt-2" asChild>
+                      <h3 className="text-lg sm:text-xl font-semibold">{product.title}</h3>
+                      <p className="mt-2 text-sm sm:text-base text-muted-foreground">{product.description}</p>
+                      <Button variant="link" className="p-0 mt-2 text-sm sm:text-base" asChild>
                         <Link href="/products">Lihat Detail</Link>
                       </Button>
                     </CardContent>
@@ -334,9 +334,9 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+      <section className="py-12 sm:py-16 md:py-24 bg-muted">
+        <div className="container mx-auto px-6 sm:px-8 md:px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -344,12 +344,12 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="order-2 lg:order-1"
             >
-              <h2 className="text-3xl md:text-4xl font-bold">Mengapa Memilih Kami</h2>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Mengapa Memilih Kami</h2>
+              <p className="mt-4 text-base sm:text-lg text-muted-foreground">
                 Dengan pengalaman dan komitmen kami, kami menghadirkan solusi manufaktur yang mendorong kesuksesan bisnis Anda.
               </p>
               
-              <div className="mt-8 space-y-6">
+              <div className="mt-6 sm:mt-8 space-y-6">
                 {[
                   {
                     icon: <TrendingUp className="h-6 w-6" />,
@@ -384,14 +384,14 @@ export default function Home() {
                       {item.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold">{item.title}</h3>
-                      <p className="mt-1 text-muted-foreground">{item.description}</p>
+                      <h3 className="text-lg sm:text-xl font-semibold">{item.title}</h3>
+                      <p className="mt-1 text-sm sm:text-base text-muted-foreground">{item.description}</p>
                     </div>
                   </motion.div>
                 ))}
               </div>
               
-              <div className="mt-8">
+              <div className="mt-6 sm:mt-8">
                 <Button asChild>
                   <Link href="/about">
                     Pelajari Lebih Lanjut Tentang Kami
@@ -423,9 +423,9 @@ export default function Home() {
         </div>
       </section>
 
-       {/* Client List Section */}
-      <section className="py-12 md:py-16 bg-muted/10">
-        <div className="container mx-auto px-4">
+      {/* Client List Section */}
+      <section className="py-12 sm:py-16 bg-muted/10">
+        <div className="container mx-auto px-6 sm:px-8 md:px-4">
           <motion.div 
             initial="hidden"
             whileInView="visible"
@@ -433,8 +433,8 @@ export default function Home() {
             variants={fadeInUp}
             className="text-center max-w-3xl mx-auto mb-8"
           >
-            <h2 className="text-3xl md:text-4xl font-bold">Pelanggan Kami</h2>
-            <p className="mt-2 text-lg text-muted-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Pelanggan Kami</h2>
+            <p className="mt-2 text-base sm:text-lg text-muted-foreground">
               Kami bangga bermitra dengan perusahaan terkemuka di berbagai industri
             </p>
           </motion.div>
@@ -442,7 +442,7 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             variants={fadeInUp}
-            className="max-w-6xl mx-auto"
+            className="max-w-7xl mx-auto"
           >
             <Card className="overflow-hidden shadow-md">
               <CardContent className="p-6">
@@ -457,13 +457,6 @@ export default function Home() {
                       { name: 'Shopee Indonesia', image: '/images/image6.png' },
                       { name: 'SEM', image: '/images/image7.png' },
                       { name: 'Leighton Contractors', image: '/images/image8.png' },
-                      // { name: 'Michelin Tire', image: '/images/image9.png' },
-                      // { name: 'Sanggar Sarana Baja', image: '/images/image10.png' },
-                      // { name: 'Tri Swardana Utama', image: '/images/image11.png' },
-                      // { name: 'Hyundai', image: '/images/image12.png' },
-                      // { name: 'SDLG', image: '/images/image13.png' },
-                      // { name: 'Develon', image: '/images/image14.png' },
-                      // { name: 'Cipta Krida Bahari', image: '/images/image15.png' },
                     ].concat([
                       { name: 'Trakindo Utama', image: '/images/image1.png' },
                       { name: 'Ritchie Bros Australia', image: '/images/image2.png' },
@@ -472,7 +465,7 @@ export default function Home() {
                       { name: 'Pionirbeton', image: '/images/image5.png' },
                     ]).map((client, index) => (
                       <div key={index} className="flex-shrink-0">
-                        <div className="w-28 h-16 relative grayscale group-hover:opacity-80 hover:!opacity-100 transition-all duration-300">
+                        <div className="w-24 sm:w-28 h-14 sm:h-16 relative grayscale group-hover:opacity-80 hover:!opacity-100 transition-all duration-300">
                           <Image
                             src={client.image}
                             alt={client.name}
@@ -507,81 +500,9 @@ export default function Home() {
         `}</style>
       </section>
 
-
-      {/* Testimonials */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold">Apa Kata Klien Kami</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Dengar pendapat dari pelanggan yang mempercayai keahlian engineering kami
-            </p>
-          </motion.div>
-
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                quote: "PT Emsada Cipta Lestari memberikan layanan body repair dan fabrikasi yang sangat berkualitas, mendukung operasional kami dengan standar tinggi.",
-                author: "Budi Santoso",
-                position: "Direktur Operasional, PT Trakindo Utama",
-                image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              },
-              {
-                quote: "Kerjasama dengan Emsada untuk instalasi dan pengiriman barang selalu andal dan tepat waktu, membantu proyek kami berjalan lancar.",
-                author: "Sarah Johnson",
-                position: "Manajer Proyek, PT Sanggar Sarana Baja",
-                image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              },
-              {
-                quote: "Layanan operator dan helper Emsada sangat profesional, memastikan unit kami siap operasi dengan efisiensi maksimal.",
-                author: "David Chen",
-                position: "Manajer Lapangan, PT Cipta Krida Bahari",
-                image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              }
-            ].map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="h-full">
-                  <CardContent className="p-6">
-                    <div className="flex flex-col h-full">
-                      <div className="text-xl text-muted-foreground italic mb-6">"{testimonial.quote}"</div>
-                      <div className="mt-auto pt-4 border-t flex items-center gap-4">
-                        <div className="h-12 w-12 rounded-full overflow-hidden relative">
-                          <Image 
-                            src={testimonial.image}
-                            alt={testimonial.author}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="font-semibold">{testimonial.author}</p>
-                          <p className="text-sm text-muted-foreground">{testimonial.position}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 md:py-24 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6 sm:px-8 md:px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -589,11 +510,11 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold">Siap Mengoptimalkan Operasional Anda?</h2>
-              <p className="mt-4 text-lg opacity-90 max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Siap Mengoptimalkan Operasional Anda?</h2>
+              <p className="mt-4 text-base sm:text-lg opacity-90 max-w-2xl mx-auto">
                 Hubungi kami hari ini untuk mendiskusikan bagaimana solusi engineering kami dapat meningkatkan efisiensi dan kualitas operasional Anda.
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="secondary" asChild>
                   <Link href="/contact">
                     Hubungi Tim Kami
